@@ -8,7 +8,7 @@ const Profil = () => {
     
     <div class="flex justify-center">
       <img 
-        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" 
+        src="https://img.magnific.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3407.jpg?semt=ais_hybrid&w=740&q=80" 
         alt="Profile" 
         class="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover"
       />
