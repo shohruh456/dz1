@@ -1,16 +1,7 @@
-import React from 'react'
-import Box from './components/Box'
-import Product from './components/Product'
-import Profil from './components/Profil'
-import Card from './components/Card'
+import CustomerList from "./components/CustomerList";
 
-const App = () => {
-  return (
-    <div>
-      <Profil/> 
-      <Card/>
-    </div>
-  )
+function App() {
+  return <CustomerList />;
 }
 
-export default App
+export default App;
