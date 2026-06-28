@@ -1,11 +1,11 @@
 import React from 'react'
 import FormTest from './components/FormTest'
 import UseEffectTest from './components/UseEffectTest'
-import Time from './components/Time'
+import DigitalClock from './components/Time'
 const App = () => {
   return (
     <div>
-      <Time />
+      <DigitalClock />
     </div>
   )
 }

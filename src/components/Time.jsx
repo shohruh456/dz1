@@ -1,40 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-function Time() {
-  const [currentTime, setCurrentTime] = useState(new Date());
+function DigitalClock() {
+  const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
+    const intervalId = setInterval(() => {
+      setTime(new Date());
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
 
-  const formatTime = (date) => {
-    return date.toLocaleTimeString("ru-RU", {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-    });
-  };
-
   return (
-    <div className="text-center mt-12 font-sans max-w-sm mx-auto p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
-      <h2 className="text-2xl font-bold text-gray-800">Часы</h2>
-      <div className="text-5xl font-mono my-6 text-gray-900 tracking-wider">
-        {formatTime(currentTime)}
+    <div className="flex items-center justify-center min-h-screen bg-slate-950">
+      <div className="text-center p-8 bg-slate-900 rounded-3xl shadow-2xl border border-slate-800 max-w-xs w-full">
+        <h2 className="text-xs font-bold text-slate-500 tracking-widest uppercase mb-3">
+          Digital Clock
+        </h2>
+        <div className="text-5xl font-mono font-black text-cyan-400 tracking-wider drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+          {time.toLocaleTimeString()}
+        </div>
+        
       </div>
-      <p className="text-gray-600">
-        {currentTime.toLocaleDateString("ru-RU", {
-          weekday: "long",
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })}
-      </p>
     </div>
   );
 }
 
-export default Time;
+export default DigitalClock;
